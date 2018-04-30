@@ -1,0 +1,11 @@
+{
+  "name": "f",
+  "version": "0.0.1",
+  "description":
+    "Small, idiomatic, javascript helpers for functional programming",
+  "main": "index.js",
+  "repository": "git@github.com:jssee/f.git",
+  "author": "Jesse Hoyos <jesse@mojotech.com>",
+  "license": "MIT",
+  "private": false
+}
