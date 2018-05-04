@@ -1,3 +1,11 @@
+/**
+ * Quickly get elements using a string with CSS syntax
+ * @example
+ * // returns the DOM element with id #app
+ * select('#app');
+ * @param {string} s the selector you wish to return
+ * 
+ */
 const select = s => {
   if (s == 'body') {
     return document.body
@@ -17,21 +25,3 @@ const select = s => {
   }
   return document.querySelectorAll(s)
 }
-
-const get = {
-  parent: function(p) {
-    return p ? p : document
-  },
-
-  id: function(el, p)  {
-    return this.parent(p).getElementById(el)
-  },
-
-  class: function(el, p) {
-    return this.parent(p).getElementByClassName(el)
-  },
-
-  tag: function(el, p) {
-    return this.parent(p).getElementByTagName(el)
-  }
-};
