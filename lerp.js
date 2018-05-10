@@ -4,6 +4,6 @@
  * @param {*} b Ending coordinates
  * @param {*} rate The rate of transition to and from point a to point b
  */
-const lerp = (a, b rate) => {
-  return a + (b - a) * rate;
-}
+const lerp = (a, b, rate) => a * (1 - rate) + b * rate;
+
+export default lerp;

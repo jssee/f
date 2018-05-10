@@ -3,25 +3,24 @@
  * @example
  * // returns the DOM element with id #app
  * select('#app');
- * @param {string} s the selector you wish to return
- * 
+ * @param {string} selector the selector you wish to return
  */
-const select = s => {
-  if (s == 'body') {
-    return document.body
-  }
-  else if (s == 'head') {
-    return document.head
-  }
-  else if (/^[\#.]?[\w-]+$/.test(s)) {
-    switch (s[0]) {
+const select = selector => {
+  if (selector == 'body') {
+    return document.body;
+  } else if (selector == 'head') {
+    return document.head;
+  } else if (/^[\#.]?[\w-]+$/.test(selector)) {
+    switch (selector[0]) {
       case '#':
-        return document.getElementsById(s.slice(1))
+        return document.getElementsById(selector.slice(1));
       case '.':
-        return document.getElementsByClassName(s.slice(1))
+        return document.getElementsByClassName(selector.slice(1));
       default:
-        return document.getElementByTagName(s)
+        return document.getElementByTagName(selector);
     }
   }
-  return document.querySelectorAll(s)
-}
+  return document.querySelectorAll(selector);
+};
+
+export default select;

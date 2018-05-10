@@ -5,10 +5,10 @@
  * const addOne = a => a + 1;
  * const oneAdded = addOne(1);
  * interval(oneAdded, 500);
- * @param {callback} cb The callback function to be invoked once per delay period
+ * @param {function} callback The callback function to be invoked once per delay period
  * @param {number} delay The amount of time in milliseconds to delay the invocation of the supplied callback
  */
-const interval = (cb, delay) => {
+const interval = (callback, delay) => {
   const tick = now => {
     if (now - start >= delay) {
       start = now;
@@ -19,3 +19,5 @@ const interval = (cb, delay) => {
   let start = performance.now();
   requestAnimationFrame(tick);
 };
+
+export default interval;
