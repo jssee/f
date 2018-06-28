@@ -12,7 +12,7 @@ const interval = (callback, delay) => {
   const tick = now => {
     if (now - start >= delay) {
       start = now;
-      cb();
+      callback();
     }
     requestAnimationFrame(tick);
   };
